@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+<!-- 스크롤 위치 값  -->
+<button type="button" id="btn">위치이동</button>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>검색 페이지 예제</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #search-box {
+      width: 400px;
+      padding: 10px;
+    }
+
+    #search-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #search-results {
+      margin: 20px;
+    }
+  </style>
+</head>
+
 <body>
-  
+
+  <div id="root">
+    <header>
+      <h1>검색 페이지</h1>
+    </header>
+    <div id="search-box">
+      <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+      <button id="search-button">검색</button>
+    </div>
+    <div id="search-results">
+      <h2>검색 결과</h2>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
 
 <script>
-  let bom = window.bom;
-  console.dir(bom);
+
+  const btn = document.querySelector('#btn')
+  btn.addEventListener('click', function () {
+    //window.scrollTo(0, 100) //or
+    window.scrollTo({ left: 0, top: 100 })
+  })
 
 </script>
 
-    
+
 </body>
+
 </html>
